@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Update a Book | Book Store Management
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav class="navbar">
+   <a class="project-name" href="dashboard.html">
+    <span class="brand-mark">
+     ▤
+    </span>
+    Book Store Management
+    <span class="brand-subtitle">
+    </span>
+   </a>
+   <div class="nav-right">
+    <a href="dashboard.html">
+     Dashboard
+    </a>
+    <a href="read.html">
+     Browse books
+    </a>
+    <button id="logoutBtn" onclick="logout()">
+     Log out
+    </button>
+   </div>
+  </nav>
+  <main class="container">
+   <div class="page-heading">
+    <div>
+     <p class="eyebrow">
+      Keep information current
+     </p>
+     <h1>
+      Update book details
+     </h1>
+     <p class="subtitle">
+      Enter the book ID and the new title and author. Leave a field blank only if your database update supports it.
+     </p>
+    </div>
+   </div>
+   <section class="form-card">
+    <div class="notice">
+     Tip: Open
+     <a href="read.html">
+      Browse books
+     </a>
+     to find the ID of the record you want to update.
+    </div>
+    <div class="field">
+     <label for="id">
+      Book ID
+     </label>
+     <input id="id" min="1" placeholder="Enter the book ID" required="" type="number"/>
+    </div>
+    <div class="field">
+     <label for="title">
+      New title
+     </label>
+     <input id="title" placeholder="Enter updated title" required=""/>
+    </div>
+    <div class="field">
+     <label for="author">
+      New author
+     </label>
+     <input id="author" placeholder="Enter updated author" required=""/>
+    </div>
+    <div class="form-actions">
+     <button onclick="updateBook()">
+      Save changes
+     </button>
+     <a class="btn secondary" href="read.html">
+      Cancel
+     </a>
+    </div>
+    <a class="back" href="dashboard.html">
+     &larr; Back to dashboard
+    </a>
+   </section>
+  </main>
+  <footer>
+   Book Store Management &middot; Book Store Management System
+  </footer>
+  <script src="script.js">
+  </script>
+  <script>
+   checkAdmin(); updateNavbar();
+  </script>
+ </body>
+</html>
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard | Book Store Management
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav class="navbar">
+   <a class="project-name" href="dashboard.html">
+    <span class="brand-mark">
+     ▤
+    </span>
+    Book Store Management
+    <span class="brand-subtitle">
+    </span>
+   </a>
+   <div class="nav-right">
+    <a href="read.html">
+     Browse books
+    </a>
+    <button id="logoutBtn" onclick="logout()">
+     Log out &nearrow;
+    </button>
+   </div>
+  </nav>
+  <main class="container">
+   <section class="hero">
+    <div>
+     <p class="eyebrow">
+      Your library at a glance
+     </p>
+     <h1>
+      A little more order.
+      <br/>
+      A lot more reading.
+     </h1>
+     <p>
+      Manage your collection from one simple workspace. Add new titles, find a book, or keep existing details up to date.
+     </p>
+     <div class="button-row">
+      <a class="btn" href="add.html">
+       ＋ Add a book
+      </a>
+      <a class="btn secondary" href="read.html">
+       Explore collection &rarr;
+      </a>
+     </div>
+    </div>
+    <div aria-hidden="true" class="hero-art">
+     📚
+    </div>
+   </section>
+   <section class="stats">
+    <div class="stat">
+     <div class="stat-label">
+      BOOKS IN COLLECTION
+     </div>
+     <div class="stat-value" id="totalBooks">
+      &mdash;
+     </div>
+    </div>
+    <div class="stat">
+     <div class="stat-label">
+      WAYS TO MANAGE
+     </div>
+     <div class="stat-value">
+      04
+     </div>
+    </div>
+    <div class="stat">
+     <div class="stat-label">
+      YOUR WORKSPACE
+     </div>
+     <div class="stat-value stat-value-small">
+      Ready
+     </div>
+    </div>
+   </section>
+   <div class="page-heading">
+    <div>
+     <p class="eyebrow">
+      Quick actions
+     </p>
+     <h2>
+      What would you like to do?
+     </h2>
+     <p class="subtitle">
+      Choose a task to get started. Your existing book records stay in your database.
+     </p>
+    </div>
+   </div>
+   <section class="menu">
+    <a href="add.html">
+     <span class="tile-icon">
+      ✚
+     </span>
+     <strong>
+      Add a book
+     </strong>
+     <small>
+      Add a title or import a CSV file.
+     </small>
+    </a>
+    <a href="read.html">
+     <span class="tile-icon">
+      &telrec;
+     </span>
+     <strong>
+      Browse books
+     </strong>
+     <small>
+      View the collection and search titles.
+     </small>
+    </a>
+    <a href="update.html">
+     <span class="tile-icon">
+      ✎
+     </span>
+     <strong>
+      Update details
+     </strong>
+     <small>
+      Edit a book by its ID.
+     </small>
+    </a>
+    <a href="delete.html">
+     <span class="tile-icon">
+      ⌫
+     </span>
+     <strong>
+      Remove a book
+     </strong>
+     <small>
+      Delete a record by its ID.
+     </small>
+    </a>
+   </section>
+  </main>
+  <footer>
+   Book Store Management &middot; Book Store Management System
+  </footer>
+  <script src="script.js">
+  </script>
+  <script>
+   checkAdmin(); loadDashboardStats();
+  </script>
+ </body>
+</html>
+

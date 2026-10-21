@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Book Collection | Book Store Management
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav class="navbar">
+   <a class="project-name" href="dashboard.html">
+    <span class="brand-mark">
+     ▤
+    </span>
+    Book Store Management
+    <span class="brand-subtitle">
+    </span>
+   </a>
+   <div class="nav-right">
+    <a href="dashboard.html">
+     Dashboard
+    </a>
+    <a href="add.html">
+     ＋ Add book
+    </a>
+    <button id="logoutBtn" onclick="logout()">
+     Log out
+    </button>
+   </div>
+  </nav>
+  <main class="container">
+   <div class="page-heading">
+    <div>
+     <p class="eyebrow">
+      The complete collection
+     </p>
+     <h1>
+      Books in your library
+     </h1>
+     <p class="subtitle">
+      Browse your saved titles or search by book name or author.
+     </p>
+    </div>
+    <button class="secondary" onclick="loadBooks()">
+     &orarr; Refresh
+    </button>
+   </div>
+   <div class="toolbar">
+    <input id="searchInput" onkeydown="if(event.key==='Enter') searchBooks()" placeholder="Search by title or author&hellip;" type="search"/>
+    <button onclick="searchBooks()">
+     Search collection
+    </button>
+    <button class="secondary" onclick="document.getElementById('searchInput').value='';loadBooks()">
+     Clear
+    </button>
+   </div>
+   <div class="table-wrap">
+    <table>
+     <thead>
+      <tr>
+       <th>
+        ID
+       </th>
+       <th>
+        Book title
+       </th>
+       <th>
+        Author
+       </th>
+       <th>
+        Published date
+       </th>
+      </tr>
+     </thead>
+     <tbody id="bookTable">
+      <tr>
+       <td class="empty-state" colspan="4">
+        Loading your books&hellip;
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <a class="back" href="dashboard.html">
+    &larr; Back to dashboard
+   </a>
+  </main>
+  <footer>
+   Book Store Management &middot; Book Store Management System
+  </footer>
+  <script src="script.js">
+  </script>
+  <script>
+   checkAdmin(); loadBooks(); updateNavbar();
+  </script>
+ </body>
+</html>
+

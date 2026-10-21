@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Remove a Book | Book Store Management
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav class="navbar">
+   <a class="project-name" href="dashboard.html">
+    <span class="brand-mark">
+     ▤
+    </span>
+    Book Store Management
+    <span class="brand-subtitle">
+    </span>
+   </a>
+   <div class="nav-right">
+    <a href="dashboard.html">
+     Dashboard
+    </a>
+    <a href="read.html">
+     Browse books
+    </a>
+    <button id="logoutBtn" onclick="logout()">
+     Log out
+    </button>
+   </div>
+  </nav>
+  <main class="container">
+   <div class="page-heading">
+    <div>
+     <p class="eyebrow">
+      Collection maintenance
+     </p>
+     <h1>
+      Remove a book
+     </h1>
+     <p class="subtitle">
+      Delete a record using its ID. This action removes the record from your database.
+     </p>
+    </div>
+   </div>
+   <section class="form-card">
+    <div class="upload-panel notice warning">
+     <h3>
+      Before you continue
+     </h3>
+     <p>
+      Double-check the book ID before deleting. This action cannot be undone from this screen.
+     </p>
+    </div>
+    <div class="field">
+     <label for="id">
+      Book ID
+     </label>
+     <input id="id" min="1" placeholder="Enter the ID to remove" required="" type="number"/>
+    </div>
+    <div class="form-actions">
+     <button class="danger" onclick="deleteBook()">
+      Remove book
+     </button>
+     <a class="btn secondary" href="read.html">
+      Keep browsing
+     </a>
+    </div>
+    <a class="back" href="dashboard.html">
+     &larr; Back to dashboard
+    </a>
+   </section>
+  </main>
+  <footer>
+   Book Store Management &middot; Book Store Management System
+  </footer>
+  <script src="script.js">
+  </script>
+  <script>
+   checkAdmin(); updateNavbar();
+  </script>
+ </body>
+</html>
+

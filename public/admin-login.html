@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Admin Login | Book Store Management
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav class="navbar">
+   <a class="project-name" href="index.html">
+    <span class="brand-mark">
+     ▤
+    </span>
+    Book Store Management
+    <span class="brand-subtitle">
+    </span>
+   </a>
+   <div class="nav-right">
+    <a href="index.html">
+     Create account
+    </a>
+   </div>
+  </nav>
+  <main class="auth-shell">
+   <div class="auth-brand">
+    <div class="brand-mark">
+     ▤
+    </div>
+    <p class="eyebrow">
+     Welcome back
+    </p>
+    <h1>
+     Admin sign in
+    </h1>
+    <p>
+     Sign in to organize and maintain your book collection.
+    </p>
+   </div>
+   <form onsubmit="event.preventDefault(); adminLogin();">
+    <div class="field">
+     <label for="username">
+      Username
+     </label>
+     <input autocomplete="username" id="username" name="username" placeholder="Enter your username" required=""/>
+    </div>
+    <div class="field">
+     <label for="password">
+      Password
+     </label>
+     <input autocomplete="current-password" id="password" name="password" placeholder="Enter your password" required="" type="password"/>
+    </div>
+    <button class="full" type="submit">
+     Sign in securely
+     <span>
+      &rarr;
+     </span>
+    </button>
+   </form>
+   <p class="auth-foot">
+    New to Book Store Management?
+    <a href="index.html">
+     Create an account
+    </a>
+   </p>
+  </main>
+  <footer>
+   Book Store Management &middot; Simple tools for a well-organized library
+  </footer>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Add a Book | Book Store Management
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav class="navbar">
+   <a class="project-name" href="dashboard.html">
+    <span class="brand-mark">
+     ▤
+    </span>
+    Book Store Management
+    <span class="brand-subtitle">
+    </span>
+   </a>
+   <div class="nav-right">
+    <a href="dashboard.html">
+     Dashboard
+    </a>
+    <a href="read.html">
+     Browse books
+    </a>
+    <button id="logoutBtn" onclick="logout()">
+     Log out
+    </button>
+   </div>
+  </nav>
+  <main class="container">
+   <div class="page-heading">
+    <div>
+     <p class="eyebrow">
+      Grow your collection
+     </p>
+     <h1>
+      Add a new book
+     </h1>
+     <p class="subtitle">
+      Enter the book's details below. A published date is recorded automatically when you add a book.
+     </p>
+    </div>
+   </div>
+   <section class="form-card">
+    <div class="field">
+     <label for="title">
+      Book title
+     </label>
+     <input id="title" placeholder="e.g. The Midnight Library" required=""/>
+    </div>
+    <div class="field">
+     <label for="author">
+      Author name
+     </label>
+     <input id="author" placeholder="e.g. Matt Haig" required=""/>
+    </div>
+    <div class="form-actions">
+     <button onclick="addBook()">
+      ＋ Add book
+     </button>
+     <a class="btn secondary" href="read.html">
+      View collection
+     </a>
+    </div>
+    <div class="divider">
+    </div>
+    <div class="upload-panel">
+     <p class="eyebrow">
+      Bulk import
+     </p>
+     <h3>
+      Have a CSV file?
+     </h3>
+     <p>
+      Upload a CSV with
+      <strong>
+       title
+      </strong>
+      and
+      <strong>
+       author
+      </strong>
+      columns to add multiple books at once.
+     </p>
+     <form enctype="multipart/form-data" id="csvForm" onsubmit="event.preventDefault(); uploadCSV();">
+      <div class="field">
+       <label for="csvFile">
+        Choose CSV file
+       </label>
+       <input accept=".csv" id="csvFile" required="" type="file"/>
+      </div>
+      <button type="submit">
+       &uarr; Upload CSV
+      </button>
+     </form>
+    </div>
+    <a class="back" href="dashboard.html">
+     &larr; Back to dashboard
+    </a>
+   </section>
+  </main>
+  <footer>
+   Book Store Management &middot; Book Store Management System
+  </footer>
+  <script src="script.js">
+  </script>
+  <script>
+   checkAdmin(); updateNavbar();
+  </script>
+ </body>
+</html>
+
